@@ -26,7 +26,7 @@ class StudentController {
 
     const data = {
       message: "Menambahkan data student",
-      data: student,
+      data: Student,
     };
 
     res.json(data);
