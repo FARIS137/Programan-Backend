@@ -127,8 +127,8 @@ class PatientController {
       }
     }
     async positive(req,res) {
-      const positive  = req.body.status;
-      const patient = await Patient.findByStatus(positive);
+      const status ='positive';
+      const patient = await Patient.findByStatus(status);
       
       if (patient) {
         
@@ -140,8 +140,8 @@ class PatientController {
       } 
     }
     async recovered(req,res) {
-      const  recovered  = req.body.status;
-      const patient = await Patient.findByStatus(recovered);
+      const  status  = 'recovered';
+      const patient = await Patient.findByStatus(status);
                       
 
       if (patient) {
@@ -154,8 +154,8 @@ class PatientController {
       } 
     }
     async dead(req,res) {
-      const dead = req.body.status;
-      const patient = await Patient.findByStatus(dead);
+      const status = 'dead';
+      const patient = await Patient.findByStatus(status);
                       
 
       if (patient) {
